@@ -1,5 +1,6 @@
 
 
+
 function twoSum(nums: number[], target: number): number[] {
     //eh?
     let newNums:number[] = []

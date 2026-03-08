@@ -1,90 +1,44 @@
 
 //console.time("tiempo")
 
-import console = require("console")
 
-//esta solucion es solucion pero no del tipo o n log (m+n)
-function findMedianSortedArrays(nums1:number[], nums2:number[]):number {
-    
-    let array1 = [...nums1,...nums2]
-    // console.log(array1)        
-    // console.log("----------")        
-    
-    //comparar el primero con el segundo
-    //ordenar los arrays
-    let boolean= true
+// ex 5 Given a string s, return the longest palindromic substring in s.
 
-    while(boolean){
+// Example 1:
 
-        boolean = false
+// Input: s = "babad"
+// Output: "bab"
+// Explanation: "aba" is also a valid answer.
+// Example 2:
 
-        for (let i = 0; i < array1.length; i++) {
-            // console.log("-----",i+1,"iteracion")        
-            // console.log("------antes de arreglar-----")        
-            // console.log(array1)        
-            // console.log("----despues de arreglar-------")        
+// Input: s = "cbbd"
+// Output: "bb"
+ 
+console.log("ok")
+
+function longestPalindrome(s: string): string {
+    //si la midad menos 1 es igual a la mitad mas 1
+    // casos aa, aba, abba, ""
+    let centro = 0
+    let punteroIzq = 1
+    let punteroDer = 1
+
+    for (let i = 0; i < s.length; i++) {
+        
+        if (s[centro-punteroIzq] === s[centro+punteroDer]) {
             
             
-            let mayor = array1[i+1]!
 
-            if (mayor === undefined) {
-                console.log("hay un indefined")
-                mayor = Infinity
-                }
 
-            if (array1[i]!>mayor){
-                
-                let elprimero = array1[i] 
-                let elsegundo = array1[i+1]
-
-                if (typeof elprimero === "number" && typeof elsegundo === "number"   ) {
-                  array1[i+1] = elprimero
-                  array1[i] = elsegundo
-                  
-                }
-                
-                boolean=true
-
-                
-            } 
-            
-            
-            // console.log("  ")        
+        } else {
             
         }
-    }
-    
-    if (array1.length % 2 === 0) {
         
-        let resultado = (array1[array1.length/2]!+array1[(array1.length/2)-1]!)/2
-        //console.log(array1)
-        //console.log(resultado)
-        return resultado
-
-    } else if (array1.length % 2 !== 0){
-        
-        let resultado = array1[array1.length/2-0.5]!
-        //console.log(array1)
-        //console.log(resultado)
-        return resultado
+        centro++    
     }
 
 
-
-
-    // console.log(array1) 
-    // console.log(array1.length/2)
-    // console.log((array1[array1.length/2]+array1[(array1.length/2)-1])/2)
-
-
-
-    return 0
+    return "ok"
 };
 
-const respuest = findMedianSortedArrays([1,2],[3,4])//2.5 expected
-
-console.log(respuest)
-
-
-//console.timeEnd("tiempo")
-
+//asdfdsa
